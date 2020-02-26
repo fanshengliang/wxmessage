@@ -43,7 +43,7 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 
 def weixin(request):
 
-    if request.method == 'GET':
+    if request.method == 'GET' and request.GET:
         #下面这四个参数是在接入时，微信的服务器发送过来的参数
         signature = request.GET.get('signature', None)
         timestamp = request.GET.get('timestamp', None)
@@ -68,7 +68,7 @@ def weixin(request):
         if hashstr == signature:
           return HttpResponse(echostr)
 
-    if request.method == 'POST':
+    if request.method == 'POST' and request.POST:
         #将程序中字符输出到非 Unicode 环境（比如 HTTP 协议数据）时可以使用 smart_str 方法
         data = smart_str(request.body)
         print(data)
