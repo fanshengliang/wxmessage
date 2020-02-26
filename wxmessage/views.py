@@ -55,15 +55,12 @@ def weixin(request):
             #把token，timestamp, nonce放在一个序列中，并且按字符排序
             list = [token, timestamp, nonce]
             list.sort()
-            sha1 = hashlib.sha1()
-            map(sha1.update,list)
-            hashcode = sha1.hexdigest()
+            hashstr = ''.join([s for s in list])
 
-        #通过python标准库中的sha1加密算法，处理上面的字符串，形成新的字符串。
-        # hashstr = hashlib.sha1(hashstr.encode(encoding='utf-8')).hexdigest()
+        # 通过python标准库中的sha1加密算法，处理上面的字符串，形成新的字符串。
+            hashstr = hashlib.sha1(hashstr.encode(encoding='utf-8')).hexdigest()
 
-            print "handle/GET func: hashcode, signature: ", hashcode, signature
-            if hashcode == signature:
+            if hashstr == signature:
                 return echostr
             else:
                 return ""
