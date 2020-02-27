@@ -56,22 +56,9 @@ def weixin(request):
                 print toUser,fromUser,content
                 replyMsg = reply.TextMsg(toUser, fromUser, content)
                 return replyMsg.send()
-            #isinstance，会认为子类是一种父类类型，isinstance(object, classinfo)
-            #object是实例对象，classinfo 可以是直接或间接类名、基本类型或者由它们组成的元组。
-            #主要用来判定recMsg类型是否receive.Msg，以及子类MsgType是什么
-            # if isinstance(recMsg, receive.Msg) and recMsg.MsgType == 'text':
-            #     toUser = recMsg.FromUserName
-            #     fromUser = recMsg.ToUserName
-            #     content = "test"
-            #     # 这里调用了reply里面的方法TextMsg
-            #     replyMsg = reply.TextMsg(toUser, fromUser, content)
-                # 调用send方法发送
-                # return replyMsg.send()
-            #     print "处理完成"
-            #     return "success"
-            # else:
-            #     print "暂且不处理"
-            #     return "success"
+            else:
+                print "暂且不处理"
+                return "success"
 
     except Exception, Argument:
         return Argument
