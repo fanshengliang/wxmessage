@@ -44,36 +44,39 @@ def weixin(request):
             else:
                 return ""
 
-        if request.method == 'POST':
+        if request.method == 'POST' and request.POST:
         # 后台打日志
-            webData= request.body
-            print "Handle Post webdata is ", webData
-            recMsg = receive.parse_xml(webData)
-            if isinstance(recMsg, receive.Msg) and recMsg.MsgType == 'text':
-                toUser = recMsg.FromUserName
-                fromUser = recMsg.ToUserName
-                content = "test"
-                print toUser,fromUser,content
-                replyMsg = reply.TextMsg(toUser, fromUser, content)
-                return replyMsg.send()
-            #isinstance，会认为子类是一种父类类型，isinstance(object, classinfo)
-            #object是实例对象，classinfo 可以是直接或间接类名、基本类型或者由它们组成的元组。
-            #主要用来判定recMsg类型是否receive.Msg，以及子类MsgType是什么
-            # if isinstance(recMsg, receive.Msg) and recMsg.MsgType == 'text':
-            #     toUser = recMsg.FromUserName
-            #     fromUser = recMsg.ToUserName
-            #     content = "test"
-            #     # 这里调用了reply里面的方法TextMsg
-            #     replyMsg = reply.TextMsg(toUser, fromUser, content)
-                # 调用send方法发送
-                # return replyMsg.send()
-            #     print "处理完成"
-            #     return "success"
-            # else:
-            #     print "暂且不处理"
-            #     return "success"
+            print "the POST method"
+        #     concat = request.POST
+        #     signature = request.POST['signature']
+        #     print signature
+        #     print "test"
+        #     # print concat.body
+        #     webData = ''
+        # #     print "Handle Post concat is",concat
+        # #     print "Handle Post webdata is ", webData
+        #     recMsg = receive.parse_xml(webData)
+        #     # isinstance，会认为子类是一种父类类型，isinstance(object, classinfo)
+        #     # object是实例对象，classinfo 可以是直接或间接类名、基本类型或者由它们组成的元组。
+        #     # 主要用来判定recMsg类型是否receive.Msg，以及子类MsgType是什么
+        #     if isinstance(recMsg, receive.Msg) and recMsg.MsgType == 'text':
+        #         toUser = recMsg.FromUserName
+        #         fromUser = recMsg.ToUserName
+        #         content = "test"
+        #         # 这里调用了reply里面的方法TextMsg
+        #         replyMsg = reply.TextMsg(toUser, fromUser, content)
+        #         # 调用send方法发送
+        #         return replyMsg.send()
+        #     else:
+        #         print "暂且不处理"
+        #         return "success"
 
     except Exception, Argument:
         return Argument
 
+    return render(request, 'wx.html')
+
+def PostTest(request):
+    if request.method == 'GET' and request.GET:
+        print "test"
     return render(request, 'wx.html')
