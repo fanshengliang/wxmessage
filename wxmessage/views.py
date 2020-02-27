@@ -52,7 +52,10 @@ def weixin(request):
         if request.method == 'POST':
             msg = parse_message(request.body)
             if msg.type == 'text':
-                reply = create_reply('这是条文字消息', msg)
+                if msg.content == '你好':
+                    reply = create_reply('你好', msg)
+                else:
+                    reply = create_reply('这是条文字消息', msg)
             elif msg.type == 'image':
                 reply = create_reply('这是条图片消息', msg)
             elif msg.type == 'voice':
