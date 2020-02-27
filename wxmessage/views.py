@@ -11,6 +11,11 @@ from django.template.loader import render_to_string
 from django.views.decorators.csrf import ensure_csrf_cookie
 import receive
 import reply
+from wechatpy import parse_message, create_reply
+from wechatpy.exceptions import InvalidSignatureException
+from wechatpy.pay import logger
+from wechatpy.replies import TextReply
+from wechatpy.utils import check_signature
 
 # Create your views here.
 
@@ -45,20 +50,17 @@ def weixin(request):
                 return ""
 
         if request.method == 'POST':
-        # 后台打日志
-            webData= request.body
-            print "Handle Post webdata is ", webData
-            recMsg = receive.parse_xml(webData)
-            if isinstance(recMsg, receive.Msg) and recMsg.MsgType == 'text':
-                toUser = recMsg.FromUserName
-                fromUser = recMsg.ToUserName
-                content = "test"
-                print toUser,fromUser,content
-                replyMsg = reply.TextMsg(toUser, fromUser, content)
-                return replyMsg.send()
+            msg = parse_message(request.body)
+            if msg.type == 'text':
+                reply = create_reply('这是条文字消息', msg)
+            elif msg.type == 'image':
+                reply = create_reply('这是条图片消息', msg)
+            elif msg.type == 'voice':
+                reply = create_reply('这是条语音消息', msg)
             else:
-                print "暂且不处理"
-                return "success"
+                reply = create_reply('这是条其他类型消息', msg)
+            response = HttpResponse(reply.render(), content_type="application/xml")
+            return response
 
     except Exception, Argument:
         return Argument
