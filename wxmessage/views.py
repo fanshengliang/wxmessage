@@ -46,7 +46,10 @@ def weixin(request):
 
         if request.method == 'POST' and request.POST:
         # 后台打日志
-            webData = request.POST
+            print "the POST method"
+            concat = request.POST
+            webData = request.body
+            print "Handle Post concat is",concat
             print "Handle Post webdata is ", webData
             recMsg = receive.parse_xml(webData)
             # isinstance，会认为子类是一种父类类型，isinstance(object, classinfo)
