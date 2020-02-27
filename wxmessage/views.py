@@ -1,27 +1,4 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render,HttpResponse
-# from django.views.decorators.csrf import csrf_exempt
-
-import hashlib
-
-# @csrf_exempt
-# def weixin(request):
-#     if request.method == "GET" and request.GET:
-#         signature = request.GET.get('signature')
-#         timestamp = request.GET.get('timestamp')
-#         nonce = request.GET.get('nonce')
-#         echostr = request.GET.get('echostr')
-#         token = "fanshengliang2020"
-#         tmpArr = [token,timestamp,nonce]
-#         tmpArr.sort()
-#         string = ''.join(tmpArr).encode('utf-8')
-#         string = hashlib.sha1(string).hexdigest()
-#         if string == signature:
-#             return HttpResponse(echostr)
-#         else:
-#             return HttpResponse("false")
-#     return render(request,'wx.html')
-
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
@@ -32,6 +9,8 @@ import hashlib
 import time
 from django.template.loader import render_to_string
 from django.views.decorators.csrf import ensure_csrf_cookie
+import receive
+import reply
 
 # Create your views here.
 
@@ -61,9 +40,30 @@ def weixin(request):
             hashstr = hashlib.sha1(hashstr.encode(encoding='utf-8')).hexdigest()
 
             if hashstr == signature:
-                return echostr
+                return HttpResponse(echostr)
             else:
                 return ""
+
+        if request.method == 'POST' and request.POST:
+        # 后台打日志
+            webData = request.POST
+            print "Handle Post webdata is ", webData
+            recMsg = receive.parse_xml(webData)
+            # isinstance，会认为子类是一种父类类型，isinstance(object, classinfo)
+            # object是实例对象，classinfo 可以是直接或间接类名、基本类型或者由它们组成的元组。
+            # 主要用来判定recMsg类型是否receive.Msg，以及子类MsgType是什么
+            if isinstance(recMsg, receive.Msg) and recMsg.MsgType == 'text':
+                toUser = recMsg.FromUserName
+                fromUser = recMsg.ToUserName
+                content = "test"
+                # 这里调用了reply里面的方法TextMsg
+                replyMsg = reply.TextMsg(toUser, fromUser, content)
+                # 调用send方法发送
+                return replyMsg.send()
+            else:
+                print "暂且不处理"
+                return "success"
+
     except Exception, Argument:
         return Argument
 
