@@ -12,6 +12,7 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 import receive
 import reply
 from wechatpy import parse_message, create_reply
+from wechatpy.replies import ArticlesReply
 from wechatpy.exceptions import InvalidSignatureException
 from wechatpy.pay import logger
 from wechatpy.replies import TextReply
@@ -52,10 +53,18 @@ def weixin(request):
         if request.method == 'POST':
             msg = parse_message(request.body)
             if msg.type == 'text':
-                if msg.content == '你好':
-                    reply = create_reply('你好', msg)
+                if msg.content == '基础架构':
+                    reply = ArticlesReply(message=msg, articles=[
+                        {
+                            'title': u'【理论研究】漫谈传统IT基础设施01-综述',
+                            'description': u'漫谈传统IT基础设施01-综述',
+                            'url': u'https://mp.weixin.qq.com/s/JlsGLhwvwzhqOiGFUIib2g',
+                        },
+                    ])
+                    # 转换成 XML
+                    xml = reply.render()
                 else:
-                    reply = create_reply('这是条文字消息', msg)
+                    reply = create_reply('此功能正在开发中', msg)
             elif msg.type == 'image':
                 reply = create_reply('这是条图片消息', msg)
             elif msg.type == 'voice':
