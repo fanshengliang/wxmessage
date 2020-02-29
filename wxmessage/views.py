@@ -69,6 +69,11 @@ def weixin(request):
                             'image': 'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo9yEzLdiaD97rxevWTAAlsJqttX3q13qibVQ3ia9aEthTib0ia9nhicINIqT6gGLDrqQ71xt47yrBsVCBoA/0?wx_fmt=jpeg',
                         },
                     ])
+                    reply.add_article({
+                        'title': u'漫谈传统IT基础设施02-服务器（上）',
+                        'description': u'用通俗的语言，从不同的角度，介绍不同种类服务器的区别。',
+                        'url': u'https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg',
+                    })
                     # 转换成 XML
                     xml = reply.render()
                 elif msg.content == '服务器':
