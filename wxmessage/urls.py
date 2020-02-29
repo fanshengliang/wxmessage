@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', weixin),
     url(r'^wx/', weixin),
+    url(r'^create_menu/', create_menu),
 ]

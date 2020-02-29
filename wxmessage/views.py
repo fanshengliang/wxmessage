@@ -17,6 +17,7 @@ from wechatpy.exceptions import InvalidSignatureException
 from wechatpy.pay import logger
 from wechatpy.replies import TextReply
 from wechatpy.utils import check_signature
+from wechatpy import WeChatClient
 
 # Create your views here.
 
@@ -78,3 +79,36 @@ def weixin(request):
         return Argument
 
     return render(request, 'wx.html')
+
+def create_menu(request):
+    client = WeChatClient("wxfd99820aaa79b8ae", "a82ca1787197371ef415a503dbe30f68")
+    client.menu.create({
+        "button": [
+            {
+                "type": "click",
+                "name": "原创文章",
+                "key": "V1001_TODAY_MUSIC"
+            },
+            {
+                "type": "click",
+                "name": "转载新闻",
+                "key": "V1001_TODAY_SINGER"
+            },
+            {
+                "name": "菜单",
+                "sub_button": [
+                    {
+                        "type": "view",
+                        "name": "搜索",
+                        "url": "http://www.soso.com/"
+                    },
+                    {
+                        "type": "view",
+                        "name": "联系我们",
+                        "url": "http://v.qq.com/"
+                    },
+                ]
+            }
+        ]
+    })
+    return HttpResponse('ok')
