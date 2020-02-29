@@ -112,3 +112,4 @@ def create_menu(request):
         ]
     })
     return HttpResponse('ok')
+    # return render(request, 'create_menu.html')
