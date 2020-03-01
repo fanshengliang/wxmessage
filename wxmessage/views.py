@@ -18,6 +18,10 @@ from wechatpy.pay import logger
 from wechatpy.replies import TextReply
 from wechatpy.utils import check_signature
 from wechatpy import WeChatClient
+from wechatpy.replies import ImageReply
+from wechatpy.replies import VoiceReply
+
+
 
 # Create your views here.
 
@@ -57,62 +61,44 @@ def weixin(request):
                 if msg.content == '基础架构':
                     reply = TextReply(content='根据您的输入，为您推荐：\n'
                                               '<a href="https://mp.weixin.qq.com/s/JlsGLhwvwzhqOiGFUIib2g">漫谈传统IT基础设施01-综述</a>\n'
-                                              '<a href="https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg">漫谈传统IT基础设施02-服务器（上）</a>', message=msg)
+                                              '<a href="https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg">漫谈传统IT基础设施02-服务器（上）</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/8ChRzXbv7c2PvF9DzeEYGQ">漫谈传统IT基础设施03-服务器（中）</a>', message=msg)
                     # 转换成 XML
                     xml = reply.render()
                 elif msg.content == '服务器':
-                    reply = ArticlesReply(message=msg, articles=[
-                        {
-                            'title': u'漫谈传统IT基础设施02-服务器（上）',
-                            'description': u'用通俗的语言，从不同的角度，介绍不同种类服务器的区别。',
-                            'url': u'https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg',
-                            'image': 'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo9yEzLdiaD97rxevWTAAlsJqttX3q13qibVQ3ia9aEthTib0ia9nhicINIqT6gGLDrqQ71xt47yrBsVCBoA/0?wx_fmt=jpeg',
-                        },
-                    ])
+                    reply = TextReply(content='根据您的输入，为您推荐：\n'
+                                              '<a href="https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg">漫谈传统IT基础设施02-服务器（上）</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/8ChRzXbv7c2PvF9DzeEYGQ">漫谈传统IT基础设施03-服务器（中）</a>',message=msg)
                     # 转换成 XML
                     xml = reply.render()
+                elif msg.content == '综述':
+                    reply = ArticlesReply(message=msg, articles=[
+                        {
+                            'title': u'漫谈传统IT基础设施01-综述',
+                            'description': u'讲人话，用最通俗的语言，介绍支撑传统互联网与移动互联网业务系统的IT基础设施。',
+                            'url': u'https://mp.weixin.qq.com/s/JlsGLhwvwzhqOiGFUIib2g',
+                            'image': 'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo8GMkb5R9PWzyLgyMe2xALtsK2aoCHndCWdLUgP6sqH6zlpsJB5a324UibNbIxGYibM4fsgzHP0c42A/0?wx_fmt=jpeg',
+                        },
+                    ])
+                elif msg.content == '转载':
+                    reply = ArticlesReply(message=msg, articles=[
+                        {
+                            'title': u'我裁了那个年会上被奖励的员工',
+                            'description': u'疫情之下，安有完卵。',
+                            'url': u'https://mp.weixin.qq.com/s/4n4Jntv_HQbaJAnhl_-O8A',
+                        },
+                    ])
+                    xml = reply.render()
                 else:
-                    reply = create_reply('此功能正在开发中', msg)
+                    reply = create_reply('已收到您的留言，我会尽快回复，谢谢。', msg)
             elif msg.type == 'image':
-                reply = ArticlesReply(message=msg, articles=[
-                    {
-                        'title': u'漫谈传统IT基础设施01-综述',
-                        'description': u'讲人话，用最通俗的语言，介绍支撑传统互联网与移动互联网业务系统的IT基础设施。',
-                        'url': u'https://mp.weixin.qq.com/s/JlsGLhwvwzhqOiGFUIib2g',
-                        'image': 'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo8GMkb5R9PWzyLgyMe2xALtsK2aoCHndCWdLUgP6sqH6zlpsJB5a324UibNbIxGYibM4fsgzHP0c42A/0?wx_fmt=jpeg',
-                    },
-                    {
-                        'title': u'漫谈传统IT基础设施02-服务器（上）',
-                        'description': u'用通俗的语言，从不同的角度，介绍不同种类服务器的区别。',
-                        'url': u'https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg',
-                        'image': 'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo9yEzLdiaD97rxevWTAAlsJqttX3q13qibVQ3ia9aEthTib0ia9nhicINIqT6gGLDrqQ71xt47yrBsVCBoA/0?wx_fmt=jpeg',
-                    },
-                ])
-                reply.add_article({
-                    'title': u'标题3',
-                    'description': u'描述3',
-                    'url': u'http://www.qq.com',
-                })
+                reply = ImageReply(message=msg)
+                reply.media_id = 'piIalL7O9TXsiyD7qG3cVVsnNLtZX7FxaebCu2GogpRklE58UW9YWWG2oTfwoGw5'
+                # 转换成 XML
+                xml = reply.render()
             elif msg.type == 'voice':
-                reply = ArticlesReply(message=msg, articles=[
-                    {
-                        'title': u'漫谈传统IT基础设施01-综述',
-                        'description': u'讲人话，用最通俗的语言，介绍支撑传统互联网与移动互联网业务系统的IT基础设施。',
-                        'url': u'https://mp.weixin.qq.com/s/JlsGLhwvwzhqOiGFUIib2g',
-                        'image': 'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo8GMkb5R9PWzyLgyMe2xALtsK2aoCHndCWdLUgP6sqH6zlpsJB5a324UibNbIxGYibM4fsgzHP0c42A/0?wx_fmt=jpeg',
-                    },
-                    {
-                        'title': u'漫谈传统IT基础设施02-服务器（上）',
-                        'description': u'用通俗的语言，从不同的角度，介绍不同种类服务器的区别。',
-                        'url': u'https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg',
-                        'image': 'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo9yEzLdiaD97rxevWTAAlsJqttX3q13qibVQ3ia9aEthTib0ia9nhicINIqT6gGLDrqQ71xt47yrBsVCBoA/0?wx_fmt=jpeg',
-                    },
-                ])
-                reply.add_article({
-                    'title': u'标题3',
-                    'description': u'描述3',
-                    'url': u'http://www.qq.com',
-                })
+                reply = VoiceReply(message=msg)
+                reply.media_id = '4_xhNncOihFKnPyQfnDjZhkUVFkN429nstL6ThF_9bXeKNU_dw_r4HOUUXi87yZf'
                 # 转换成 XML
                 xml = reply.render()
             else:
@@ -123,18 +109,7 @@ def weixin(request):
                         'url': u'https://mp.weixin.qq.com/s/JlsGLhwvwzhqOiGFUIib2g',
                         'image': 'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo8GMkb5R9PWzyLgyMe2xALtsK2aoCHndCWdLUgP6sqH6zlpsJB5a324UibNbIxGYibM4fsgzHP0c42A/0?wx_fmt=jpeg',
                     },
-                    {
-                        'title': u'漫谈传统IT基础设施02-服务器（上）',
-                        'description': u'用通俗的语言，从不同的角度，介绍不同种类服务器的区别。',
-                        'url': u'https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg',
-                        'image': 'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo9yEzLdiaD97rxevWTAAlsJqttX3q13qibVQ3ia9aEthTib0ia9nhicINIqT6gGLDrqQ71xt47yrBsVCBoA/0?wx_fmt=jpeg',
-                    },
                 ])
-                reply.add_article({
-                    'title': u'标题3',
-                    'description': u'描述3',
-                    'url': u'http://www.qq.com',
-                })
             response = HttpResponse(reply.render(), content_type="application/xml")
             return response
 
