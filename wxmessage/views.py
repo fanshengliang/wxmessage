@@ -55,20 +55,7 @@ def weixin(request):
             msg = parse_message(request.body)
             if msg.type == 'text':
                 if msg.content == '基础架构':
-                    reply = ArticlesReply(message=msg, articles=[
-                        {
-                            'title': u'漫谈传统IT基础设施01-综述',
-                            'description': u'讲人话，用最通俗的语言，介绍支撑传统互联网与移动互联网业务系统的IT基础设施。',
-                            'url': u'https://mp.weixin.qq.com/s/JlsGLhwvwzhqOiGFUIib2g',
-                            'image':'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo8GMkb5R9PWzyLgyMe2xALtsK2aoCHndCWdLUgP6sqH6zlpsJB5a324UibNbIxGYibM4fsgzHP0c42A/0?wx_fmt=jpeg',
-                        },
-                        {
-                            'title': u'漫谈传统IT基础设施02-服务器（上）',
-                            'description': u'用通俗的语言，从不同的角度，介绍不同种类服务器的区别。',
-                            'url': u'https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg',
-                            'image': 'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo9yEzLdiaD97rxevWTAAlsJqttX3q13qibVQ3ia9aEthTib0ia9nhicINIqT6gGLDrqQ71xt47yrBsVCBoA/0?wx_fmt=jpeg',
-                        },
-                    ])
+                    reply = TextReply(content='<a href="http://www.baidu.com">百度</a>', message=msg)
                     # 转换成 XML
                     xml = reply.render()
                 elif msg.content == '服务器':
