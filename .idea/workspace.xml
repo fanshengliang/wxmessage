@@ -51,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="59" column="107" lean-forward="true" selection-start-line="59" selection-start-column="107" selection-end-line="59" selection-end-column="107" />
+            <state relative-caret-position="363">
+              <caret line="65" column="60" lean-forward="true" selection-start-line="65" selection-start-column="60" selection-end-line="65" selection-end-column="60" />
               <folding>
                 <element signature="e#24#60#0" expanded="true" />
               </folding>
@@ -197,12 +197,12 @@
       <workItem from="1582697768002" duration="7918000" />
       <workItem from="1582723376870" duration="21460000" />
       <workItem from="1582904705559" duration="4946000" />
-      <workItem from="1583037833867" duration="1017000" />
+      <workItem from="1583037833867" duration="1584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35341000" />
+    <option name="totallyTimeSpent" value="35908000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1292" height="885" extended-state="6" />
@@ -309,8 +309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="59" column="107" lean-forward="true" selection-start-line="59" selection-start-column="107" selection-end-line="59" selection-end-column="107" />
+        <state relative-caret-position="363">
+          <caret line="65" column="60" lean-forward="true" selection-start-line="65" selection-start-column="60" selection-end-line="65" selection-end-column="60" />
           <folding>
             <element signature="e#24#60#0" expanded="true" />
           </folding>

@@ -55,9 +55,9 @@ def weixin(request):
             msg = parse_message(request.body)
             if msg.type == 'text':
                 if msg.content == '基础架构':
-                    reply = TextReply(content='<p align="left">根据您的输入，为您推荐：</p>\
-                    <p align="left"><a href="https://mp.weixin.qq.com/s/JlsGLhwvwzhqOiGFUIib2g">漫谈传统IT基础设施01-综述</a></p>\
-                    <p align="left"><a href="https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg">漫谈传统IT基础设施02-服务器（上）</a></p>', message=msg)
+                    reply = TextReply(content='根据您的输入，为您推荐：\n'
+                                              '<a href="https://mp.weixin.qq.com/s/JlsGLhwvwzhqOiGFUIib2g">漫谈传统IT基础设施01-综述</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg">漫谈传统IT基础设施02-服务器（上）</a>', message=msg)
                     # 转换成 XML
                     xml = reply.render()
                 elif msg.content == '服务器':
