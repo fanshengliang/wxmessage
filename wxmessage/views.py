@@ -58,10 +58,6 @@ def weixin(request):
 
         if request.method == 'POST':
             msg = parse_message(request.body)
-            if events.SubscribeEvent.event == 'subscribe':
-                reply = create_reply('已收到您的留言，我会尽快回复，谢谢。', msg)
-                xml = reply.render()
-                
             if msg.type == 'text':
                 if msg.content == '基础架构':
                     reply = TextReply(content='根据您的输入，为您推荐：\n'
@@ -107,14 +103,14 @@ def weixin(request):
                 # 转换成 XML
                 xml = reply.render()
             else:
-                reply = ArticlesReply(message=msg, articles=[
-                    {
-                        'title': u'漫谈传统IT基础设施01-综述',
-                        'description': u'讲人话，用最通俗的语言，介绍支撑传统互联网与移动互联网业务系统的IT基础设施。',
-                        'url': u'https://mp.weixin.qq.com/s/JlsGLhwvwzhqOiGFUIib2g',
-                        'image': 'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo8GMkb5R9PWzyLgyMe2xALtsK2aoCHndCWdLUgP6sqH6zlpsJB5a324UibNbIxGYibM4fsgzHP0c42A/0?wx_fmt=jpeg',
-                    },
-                ])
+                reply = TextReply(content='谢谢关注！以下为本公众号的原创文章:\n'
+                                          '<a href="https://mp.weixin.qq.com/s/JlsGLhwvwzhqOiGFUIib2g">漫谈传统IT基础设施01-综述</a>\n'
+                                          '<a href="https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg">漫谈传统IT基础设施02-服务器（上）</a>\n'
+                                          '<a href="https://mp.weixin.qq.com/s/8ChRzXbv7c2PvF9DzeEYGQ">漫谈传统IT基础设施03-服务器（中）</a>\n'
+                                          '输入“基础架构”、“综述”、“服务器”、“转载”关键字，可以自动推荐。',
+                                  message=msg)
+                # 转换成 XML
+                xml = reply.render()
             response = HttpResponse(reply.render(), content_type="application/xml")
             return response
 
