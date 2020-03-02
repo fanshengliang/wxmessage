@@ -20,6 +20,7 @@ from wechatpy.utils import check_signature
 from wechatpy import WeChatClient
 from wechatpy.replies import ImageReply
 from wechatpy.replies import VoiceReply
+from wechatpy import events
 
 
 
@@ -57,6 +58,10 @@ def weixin(request):
 
         if request.method == 'POST':
             msg = parse_message(request.body)
+            if events.SubscribeEvent.event == 'subscribe':
+                reply = create_reply('已收到您的留言，我会尽快回复，谢谢。', msg)
+                xml = reply.render()
+                
             if msg.type == 'text':
                 if msg.content == '基础架构':
                     reply = TextReply(content='根据您的输入，为您推荐：\n'
