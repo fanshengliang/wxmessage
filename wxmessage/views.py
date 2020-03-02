@@ -63,13 +63,15 @@ def weixin(request):
                     reply = TextReply(content='根据您的输入，为您推荐：\n'
                                               '<a href="https://mp.weixin.qq.com/s/JlsGLhwvwzhqOiGFUIib2g">漫谈传统IT基础设施01-综述</a>\n'
                                               '<a href="https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg">漫谈传统IT基础设施02-服务器（上）</a>\n'
-                                              '<a href="https://mp.weixin.qq.com/s/8ChRzXbv7c2PvF9DzeEYGQ">漫谈传统IT基础设施03-服务器（中）</a>', message=msg)
+                                              '<a href="https://mp.weixin.qq.com/s/8ChRzXbv7c2PvF9DzeEYGQ">漫谈传统IT基础设施03-服务器（中）</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/9OY9KAKxWTn5jKT5pAmTlQ">漫谈传统传统IT基础设施04-服务器（下）</a>', message=msg)
                     # 转换成 XML
                     xml = reply.render()
                 elif msg.content == '服务器':
                     reply = TextReply(content='根据您的输入，为您推荐：\n'
                                               '<a href="https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg">漫谈传统IT基础设施02-服务器（上）</a>\n'
-                                              '<a href="https://mp.weixin.qq.com/s/8ChRzXbv7c2PvF9DzeEYGQ">漫谈传统IT基础设施03-服务器（中）</a>',message=msg)
+                                              '<a href="https://mp.weixin.qq.com/s/8ChRzXbv7c2PvF9DzeEYGQ">漫谈传统IT基础设施03-服务器（中）</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/9OY9KAKxWTn5jKT5pAmTlQ">漫谈传统传统IT基础设施04-服务器（下）</a>', message=msg)
                     # 转换成 XML
                     xml = reply.render()
                 elif msg.content == '综述':
@@ -107,6 +109,7 @@ def weixin(request):
                                           '<a href="https://mp.weixin.qq.com/s/JlsGLhwvwzhqOiGFUIib2g">漫谈传统IT基础设施01-综述</a>\n'
                                           '<a href="https://mp.weixin.qq.com/s/mjYAk1as2f-acc8PYynsxg">漫谈传统IT基础设施02-服务器（上）</a>\n'
                                           '<a href="https://mp.weixin.qq.com/s/8ChRzXbv7c2PvF9DzeEYGQ">漫谈传统IT基础设施03-服务器（中）</a>\n'
+                                          '<a href="https://mp.weixin.qq.com/s/9OY9KAKxWTn5jKT5pAmTlQ">漫谈传统传统IT基础设施04-服务器（下）</a>\n'
                                           '输入“基础架构”、“综述”、“服务器”、“转载”关键字，可以自动推荐。',
                                   message=msg)
                 # 转换成 XML

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="896784d9-53fe-487d-b56e-a984c5001cd9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/wxmessage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wxmessage/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="896784d9-53fe-487d-b56e-a984c5001cd9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="109" column="80" lean-forward="true" selection-start-line="109" selection-start-column="80" selection-end-line="109" selection-end-column="80" />
+            <state relative-caret-position="131">
+              <caret line="113" column="83" lean-forward="true" selection-start-line="113" selection-start-column="83" selection-end-line="113" selection-end-column="83" />
               <folding>
                 <element signature="e#24#60#0" expanded="true" />
               </folding>
@@ -200,16 +198,15 @@
       <workItem from="1582697768002" duration="7918000" />
       <workItem from="1582723376870" duration="21460000" />
       <workItem from="1582904705559" duration="4946000" />
-      <workItem from="1583037833867" duration="10914000" />
+      <workItem from="1583037833867" duration="11204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45238000" />
+    <option name="totallyTimeSpent" value="45528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="629" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18588771" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -312,8 +309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="109" column="80" lean-forward="true" selection-start-line="109" selection-start-column="80" selection-end-line="109" selection-end-column="80" />
+        <state relative-caret-position="131">
+          <caret line="113" column="83" lean-forward="true" selection-start-line="113" selection-start-column="83" selection-end-line="113" selection-end-column="83" />
           <folding>
             <element signature="e#24#60#0" expanded="true" />
           </folding>
