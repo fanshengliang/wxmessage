@@ -64,7 +64,8 @@ def weixin(request):
                                               '<a href="https://mp.weixin.qq.com/s/hM8wRsFAL4qDCFlKhQsIGQ">漫谈传统IT基础设施01-综述</a>\n'
                                               '<a href="https://mp.weixin.qq.com/s/KCV2EbjG2xXd1hdUr6RVPw">漫谈传统IT基础设施02-服务器（上）</a>\n'
                                               '<a href="https://mp.weixin.qq.com/s/PL0F6rEmkw3QSFJfDx39Lw">漫谈传统IT基础设施03-服务器（中）</a>\n'
-                                              '<a href="https://mp.weixin.qq.com/s/5KqvggkdmG5vhSW_-K-iiA">漫谈传统传统IT基础设施04-服务器（下）</a>', message=msg)
+                                              '<a href="https://mp.weixin.qq.com/s/5KqvggkdmG5vhSW_-K-iiA">漫谈传统传统IT基础设施04-服务器（下）</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/_ye4rfENEVeGFyWWERhuzg">漫谈传统IT基础设施05-网络（上）</a>', message=msg)
                     # 转换成 XML
                     xml = reply.render()
                 elif msg.content == '服务器':
@@ -81,6 +82,20 @@ def weixin(request):
                             'description': u'讲人话，用最通俗的语言，介绍支撑传统互联网与移动互联网业务系统的IT基础设施。',
                             'url': u'https://mp.weixin.qq.com/s/hM8wRsFAL4qDCFlKhQsIGQ',
                             'image': 'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo8GMkb5R9PWzyLgyMe2xALtsK2aoCHndCWdLUgP6sqH6zlpsJB5a324UibNbIxGYibM4fsgzHP0c42A/0?wx_fmt=jpeg',
+                        },
+                    ])
+                elif msg.content == '3月免费公开课':
+                    reply = TextReply(content='根据您的输入，为您推荐：\n'
+                                              '<a href="https://mp.weixin.qq.com/s/QRLj2NYrPUhRWtRdEdZaCQ">3月份各大厂家免费公开课程汇总</a>', message=msg)
+                    # 转换成 XML
+                    xml = reply.render()
+                elif msg.content == '网络':
+                    reply = ArticlesReply(message=msg, articles=[
+                        {
+                            'title': u'漫谈传统IT基础设施05-网络（上）',
+                            'description': u'用通俗的话语，深入浅出，介绍OSI七层网络模型。',
+                            'url': u'https://mp.weixin.qq.com/s/5KqvggkdmG5vhSW_-K-iiA',
+                            'image': 'https://mmbiz.qpic.cn/mmbiz_jpg/e4G78KtkFo8OhIC14GHziaCQ6L5TZHib6T56KqrvZMBT5Iib2Tl6rCCw3P7S5vFy60ZtFOntxa0SzGqRKTcRAXKnA/0?wx_fmt=jpeg',
                         },
                     ])
                 else:
@@ -101,7 +116,8 @@ def weixin(request):
                                           '<a href="https://mp.weixin.qq.com/s/KCV2EbjG2xXd1hdUr6RVPw">漫谈传统IT基础设施02-服务器（上）</a>\n'
                                           '<a href="https://mp.weixin.qq.com/s/PL0F6rEmkw3QSFJfDx39Lw">漫谈传统IT基础设施03-服务器（中）</a>\n'
                                           '<a href="https://mp.weixin.qq.com/s/5KqvggkdmG5vhSW_-K-iiA">漫谈传统传统IT基础设施04-服务器（下）</a>\n'
-                                          '输入“基础架构”、“综述”、“服务器”关键字，可以自动推荐。',
+                                          '<a href="https://mp.weixin.qq.com/s/_ye4rfENEVeGFyWWERhuzg">漫谈传统IT基础设施05-网络（上）</a>\n'
+                                          '输入“基础架构”、“服务器”、“网络”、“3月免费公开课”关键字，可以自动推荐。',
                                   message=msg)
                 # 转换成 XML
                 xml = reply.render()
