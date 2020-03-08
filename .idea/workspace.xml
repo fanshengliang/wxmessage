@@ -52,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-598">
-              <caret line="88" column="122" lean-forward="true" selection-start-line="88" selection-start-column="122" selection-end-line="88" selection-end-column="122" />
+            <state relative-caret-position="1025">
+              <caret line="90" column="108" selection-start-line="90" selection-start-column="108" selection-end-line="90" selection-end-column="108" />
               <folding>
                 <element signature="e#24#60#0" expanded="true" />
               </folding>
@@ -204,17 +204,19 @@
       <workItem from="1583037833867" duration="11204000" />
       <workItem from="1583145405841" duration="195000" />
       <workItem from="1583249144832" duration="1388000" />
-      <workItem from="1583456822009" duration="1141000" />
+      <workItem from="1583456822009" duration="1740000" />
+      <workItem from="1583574004584" duration="1746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48252000" />
+    <option name="totallyTimeSpent" value="50597000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="629" extended-state="6" />
+    <frame x="-8" y="-8" width="1412" height="911" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14871016" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13757396" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -227,7 +229,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3288948" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5016234" side_tool="true" weight="0.21675532" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49837664" visible="true" weight="0.18787879" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49837664" visible="true" weight="0.18146718" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Favorites" order="13" weight="0.3288948" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -309,8 +311,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-598">
-          <caret line="88" column="122" lean-forward="true" selection-start-line="88" selection-start-column="122" selection-end-line="88" selection-end-column="122" />
+        <state relative-caret-position="1025">
+          <caret line="90" column="108" selection-start-line="90" selection-start-column="108" selection-end-line="90" selection-end-column="108" />
           <folding>
             <element signature="e#24#60#0" expanded="true" />
           </folding>
