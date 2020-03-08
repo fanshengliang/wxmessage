@@ -98,6 +98,10 @@ def weixin(request):
                                       message=msg)
                     # 转换成 XML
                     xml = reply.render()
+                elif msg.content == '女神节礼物':
+                    reply = TextReply(content='提取码：63cy',message=msg)
+                    # 转换成 XML
+                    xml = reply.render()
                 else:
                     reply = create_reply('已收到您的留言，我会尽快回复，谢谢。\n'
                                          '输入“基础架构”、“服务器”、“网络”、“3月免费公开课”关键字，系统会为您自动推荐文章。', msg)
