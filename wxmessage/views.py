@@ -68,7 +68,7 @@ def weixin(request):
                                               '<a href="https://mp.weixin.qq.com/s/_ye4rfENEVeGFyWWERhuzg">5、漫谈传统IT基础设施05-网络（上）</a>\n'
                                               '<a href="https://mp.weixin.qq.com/s/FY0FBS0mC7idKV2CSbPCRQ">6、漫谈传统IT基础设施06-网络（下）</a>\n'
                                               '<a href="https://mp.weixin.qq.com/s/jJfrXpEHBQR25gjdlR4Iog">7、漫谈传统IT基础设施07-存储（01）</a>\n'
-                                              '<a href="https://mp.weixin.qq.com/s/Nwk_E-gzXvoz4b4LULfmgw">2、漫谈传统IT基础设施08-存储（02）</a>',message = msg)
+                                              '<a href="https://mp.weixin.qq.com/s/Nwk_E-gzXvoz4b4LULfmgw">8、漫谈传统IT基础设施08-存储（02）</a>',message = msg)
                     # 转换成 XML
                     xml = reply.render()
                 elif msg.content == '服务器':
