@@ -66,7 +66,9 @@ def weixin(request):
                                               '<a href="https://mp.weixin.qq.com/s/PL0F6rEmkw3QSFJfDx39Lw">3、漫谈传统IT基础设施03-服务器（中）</a>\n'
                                               '<a href="https://mp.weixin.qq.com/s/5KqvggkdmG5vhSW_-K-iiA">4、漫谈传统传统IT基础设施04-服务器（下）</a>\n'
                                               '<a href="https://mp.weixin.qq.com/s/_ye4rfENEVeGFyWWERhuzg">5、漫谈传统IT基础设施05-网络（上）</a>\n'
-                                              '<a href="https://mp.weixin.qq.com/s/FY0FBS0mC7idKV2CSbPCRQ">6、漫谈传统IT基础设施06-网络（下）</a>', message = msg)
+                                              '<a href="https://mp.weixin.qq.com/s/FY0FBS0mC7idKV2CSbPCRQ">6、漫谈传统IT基础设施06-网络（下）</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/jJfrXpEHBQR25gjdlR4Iog">7、漫谈传统IT基础设施07-存储（01）</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/Nwk_E-gzXvoz4b4LULfmgw">2、漫谈传统IT基础设施08-存储（02）</a>',message = msg)
                     # 转换成 XML
                     xml = reply.render()
                 elif msg.content == '服务器':
@@ -98,21 +100,29 @@ def weixin(request):
                                       message=msg)
                     # 转换成 XML
                     xml = reply.render()
+                elif msg.content == '存储':
+                    reply = TextReply(content='根据您的输入，为您推荐：\n'
+                                              '<a href="https://mp.weixin.qq.com/s/jJfrXpEHBQR25gjdlR4Iog">1、漫谈传统IT基础设施07-存储（01）</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/Nwk_E-gzXvoz4b4LULfmgw">2、漫谈传统IT基础设施08-存储（02）</a>',
+                                      message=msg)
+                    # 转换成 XML
+                    xml = reply.render()
                 elif msg.content == '女神节礼物':
                     reply = TextReply(content='提取码：63cy',message=msg)
                     # 转换成 XML
                     xml = reply.render()
                 else:
                     reply = create_reply('已收到您的留言，我会尽快回复，谢谢。\n'
-                                         '输入“基础架构”、“服务器”、“网络”、“3月免费公开课”关键字，系统会为您自动推荐文章。', msg)
+                                         '输入“基础架构”、“服务器”、“网络”、“存储”、“3月免费公开课”关键字，系统会为您自动推荐文章。', msg)
             elif msg.type == 'image':
                 reply = ImageReply(message=msg)
-                reply.media_id = 'piIalL7O9TXsiyD7qG3cVVsnNLtZX7FxaebCu2GogpRklE58UW9YWWG2oTfwoGw5'
+                reply.media_id = '7i0oKAbZZ2mFpNMzSDvb7QxHE23KOfzuRJ7V4CFcK3_LpmfDnUdrn5iuKzIWYn-F'
                 # 转换成 XML
                 xml = reply.render()
             elif msg.type == 'voice':
+                #仅支持AXX格式
                 reply = VoiceReply(message=msg)
-                reply.media_id = '4_xhNncOihFKnPyQfnDjZhkUVFkN429nstL6ThF_9bXeKNU_dw_r4HOUUXi87yZf'
+                reply.media_id = 'jmDd2jEifhF9pHFNZPKYBLOiM0BaqG_dCIYYollhnzhpTLeBHJ5hPGjPZ1kvif1I'
                 # 转换成 XML
                 xml = reply.render()
             else:
@@ -124,6 +134,8 @@ def weixin(request):
                                           '<a href="https://mp.weixin.qq.com/s/_ye4rfENEVeGFyWWERhuzg">5、漫谈传统IT基础设施05-网络（上）</a>\n'
                                           '<a href="https://mp.weixin.qq.com/s/FY0FBS0mC7idKV2CSbPCRQ">6、漫谈传统IT基础设施06-网络（下）</a>\n'
                                           '<a href="https://mp.weixin.qq.com/s/EdrZRuWbotU9zDJ03b1qdA">7、心意大于价值的女神节礼物</a>\n'
+                                          '<a href="https://mp.weixin.qq.com/s/jJfrXpEHBQR25gjdlR4Iog">8、漫谈传统IT基础设施07-存储（01）</a>\n'
+                                          '<a href="https://mp.weixin.qq.com/s/Nwk_E-gzXvoz4b4LULfmgw">9、漫谈传统IT基础设施08-存储（02）</a>\n'
                                           '输入“基础架构”、“服务器”、“网络”、“3月免费公开课”关键字，系统会为您自动推荐文章。',
                                   message=msg)
                 # 转换成 XML
