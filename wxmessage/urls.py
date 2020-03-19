@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^$', weixin),
     url(r'^wx/', weixin),
     url(r'^create_menu/', create_menu),
+    url(r'^test/', test),
 ]

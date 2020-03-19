@@ -68,7 +68,10 @@ def weixin(request):
                                               '<a href="https://mp.weixin.qq.com/s/_ye4rfENEVeGFyWWERhuzg">5、漫谈传统IT基础设施05-网络（上）</a>\n'
                                               '<a href="https://mp.weixin.qq.com/s/FY0FBS0mC7idKV2CSbPCRQ">6、漫谈传统IT基础设施06-网络（下）</a>\n'
                                               '<a href="https://mp.weixin.qq.com/s/jJfrXpEHBQR25gjdlR4Iog">7、漫谈传统IT基础设施07-存储（01）</a>\n'
-                                              '<a href="https://mp.weixin.qq.com/s/Nwk_E-gzXvoz4b4LULfmgw">8、漫谈传统IT基础设施08-存储（02）</a>',message = msg)
+                                              '<a href="https://mp.weixin.qq.com/s/Nwk_E-gzXvoz4b4LULfmgw">8、漫谈传统IT基础设施08-存储（02）</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/b8AxVdV5yaZXWKPcYxh_4A">9、漫谈传统IT基础设施09-存储（03）</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/dz17sM32G1SkKRBid4rw8A">10、漫谈传统IT基础设施10-存储（04）</a>',
+                                              message = msg)
                     # 转换成 XML
                     xml = reply.render()
                 elif msg.content == '服务器':
@@ -103,7 +106,28 @@ def weixin(request):
                 elif msg.content == '存储':
                     reply = TextReply(content='根据您的输入，为您推荐：\n'
                                               '<a href="https://mp.weixin.qq.com/s/jJfrXpEHBQR25gjdlR4Iog">1、漫谈传统IT基础设施07-存储（01）</a>\n'
-                                              '<a href="https://mp.weixin.qq.com/s/Nwk_E-gzXvoz4b4LULfmgw">2、漫谈传统IT基础设施08-存储（02）</a>',
+                                              '<a href="https://mp.weixin.qq.com/s/Nwk_E-gzXvoz4b4LULfmgw">2、漫谈传统IT基础设施08-存储（02）</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/b8AxVdV5yaZXWKPcYxh_4A">3、漫谈传统IT基础设施09-存储（03）</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/dz17sM32G1SkKRBid4rw8A">4、漫谈传统IT基础设施10-存储（04）</a>',
+                                      message=msg)
+                    # 转换成 XML
+                    xml = reply.render()
+                elif msg.content == '云计算':
+                    reply = TextReply(content='根据您的输入，为您推荐：\n'
+                                              '<a href="https://mp.weixin.qq.com/s/WTM1b2HiGgWtcXDt1QpQCw">1、漫谈云计算IT基础设施01-综述</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/Sfy6HEQt-V-KT9JxEEaDqA">2、漫谈云计算IT基础设施02-计算虚拟化</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/vTybXVmdlloddzGtFhsc6g">3、漫谈云计算IT基础设施03-网络虚拟化</a>\n',
+
+                                      message=msg)
+                    # 转换成 XML
+                    xml = reply.render()
+                elif msg.content == '动手折腾':
+                    reply = TextReply(content='根据您的输入，为您推荐：\n'
+                                              '<a href="https://mp.weixin.qq.com/s/EdrZRuWbotU9zDJ03b1qdA">1、心意大于价值的女神节礼物</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/mPGiSepN0SvI122YPlukVQ">2、比闪电侠还快~3分钟完成个人博客搭建</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/eg0Mm2pbzwNyG5PwY6br4A">3、人云亦云~我的博客也上云</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/zWphnZmNO63clnTaG2flRw">4、VMware Workstation安装</a>\n',
+
                                       message=msg)
                     # 转换成 XML
                     xml = reply.render()
@@ -113,16 +137,16 @@ def weixin(request):
                     xml = reply.render()
                 else:
                     reply = create_reply('已收到您的留言，我会尽快回复，谢谢。\n'
-                                         '输入“基础架构”、“服务器”、“网络”、“存储”、“3月免费公开课”关键字，系统会为您自动推荐文章。', msg)
+                                         '输入“基础架构”、“服务器”、“网络”、“存储”、“云计算”、“动手折腾”关键字，系统会为您自动推荐文章。', msg)
             elif msg.type == 'image':
                 reply = ImageReply(message=msg)
-                reply.media_id = '7i0oKAbZZ2mFpNMzSDvb7QxHE23KOfzuRJ7V4CFcK3_LpmfDnUdrn5iuKzIWYn-F'
+                reply.media_id = 'rv1KVRYx5FzG8zdZIj31Bxw4LbLjpoNYwlybyiDSvdBjDYnmHqHRMqWORcsKJIiF'
                 # 转换成 XML
                 xml = reply.render()
             elif msg.type == 'voice':
                 #仅支持AXX格式
                 reply = VoiceReply(message=msg)
-                reply.media_id = 'jmDd2jEifhF9pHFNZPKYBLOiM0BaqG_dCIYYollhnzhpTLeBHJ5hPGjPZ1kvif1I'
+                reply.media_id = 'b7jKLKqmmZmSAi9FteOFjwi3Xfh-V3SmQSxU7Tj633TelviHPieQ6yyF6-qB_lPV'
                 # 转换成 XML
                 xml = reply.render()
             else:
@@ -181,3 +205,6 @@ def create_menu(request):
     })
     return HttpResponse('ok')
     # return render(request, 'create_menu.html')
+
+def test(request):
+    return render(request,'test.html')
