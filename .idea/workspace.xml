@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="896784d9-53fe-487d-b56e-a984c5001cd9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/wxmessage/views2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wxmessage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wxmessage/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,8 +43,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+            <state relative-caret-position="450">
+              <caret line="88" column="27" lean-forward="true" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
+              <folding>
+                <element signature="e#24#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wxmessage/views2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6">
+              <caret line="210" column="20" lean-forward="true" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="20" />
               <folding>
                 <element signature="e#24#60#0" expanded="true" />
               </folding>
@@ -90,8 +103,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -116,6 +129,7 @@
         <option value="$PROJECT_DIR$/wxmessage/urls.py" />
         <option value="$PROJECT_DIR$/wxmessage/settings.py" />
         <option value="$PROJECT_DIR$/templates/test.html" />
+        <option value="$PROJECT_DIR$/wxmessage/views2.py" />
         <option value="$PROJECT_DIR$/wxmessage/views.py" />
       </list>
     </option>
@@ -226,18 +240,18 @@
       <workItem from="1584581922692" duration="3970000" />
       <workItem from="1585032602334" duration="600000" />
       <workItem from="1585987135564" duration="616000" />
-      <workItem from="1586945470083" duration="14934000" />
+      <workItem from="1586945470083" duration="15731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78066000" />
+    <option name="totallyTimeSpent" value="78863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1292" height="885" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15422077" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15422077" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -250,7 +264,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3288948" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5016234" side_tool="true" weight="0.21675532" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49837664" visible="true" weight="0.075898804" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49837664" visible="true" weight="0.075898804" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3288948" />
       <window_info anchor="bottom" id="Favorites" order="13" weight="0.3288948" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -341,10 +355,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wxmessage/views2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="210" column="20" lean-forward="true" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="20" />
+          <folding>
+            <element signature="e#24#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+        <state relative-caret-position="450">
+          <caret line="88" column="27" lean-forward="true" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
           <folding>
             <element signature="e#24#60#0" expanded="true" />
           </folding>
