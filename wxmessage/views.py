@@ -22,6 +22,10 @@ from wechatpy.replies import ImageReply
 from wechatpy.replies import VoiceReply
 from wechatpy import events
 
+from wechatpy import parse_message
+from wechatpy.crypto import WeChatCrypto
+from wechatpy.exceptions import InvalidSignatureException, InvalidAppIdException
+
 
 
 # Create your views here.
@@ -57,7 +61,30 @@ def weixin(request):
                 return ""
 
         if request.method == 'POST':
-            msg = parse_message(request.body)
+            # 下面这四个参数是在接入时，微信的服务器发送过来的参数
+            msg_signature = request.GET.get('signature', None)
+            timestamp = request.GET.get('timestamp', None)
+            nonce = request.GET.get('nonce', None)
+            # echostr = request.GET.get('echostr', None)
+
+            # 这里的token需要自己设定，主要是和微信的服务器完成验证使用
+            token = 'fanshengliang2020'
+            encoding_aes_key = '402Jb5bdXfGejPFfhvMd6On7tvzxAlapIYj6gxMEHX7'
+            appid = 'wxfd99820aaa79b8ae'
+            crypto = WeChatCrypto(token, encoding_aes_key, appid)
+            try:
+                decrypted_xml = crypto.decrypt_message(
+                    request.body,
+                    msg_signature,
+                    timestamp,
+                    nonce
+                )
+            except (InvalidAppIdException, InvalidSignatureException):
+                # 处理异常或忽略
+                pass
+
+            msg = parse_message(decrypted_xml)
+            # msg = parse_message(request.body)
             if msg.type == 'text':
                 if msg.content == '基础架构':
                     reply = TextReply(content='根据您的输入，为您推荐：\n'
@@ -150,17 +177,8 @@ def weixin(request):
                 # 转换成 XML
                 xml = reply.render()
             else:
-                reply = TextReply(content='谢谢关注！以下为本公众号的原创文章:\n'
-                                          '<a href="https://mp.weixin.qq.com/s/hM8wRsFAL4qDCFlKhQsIGQ">1、漫谈传统IT基础设施01-综述</a>\n'
-                                          '<a href="https://mp.weixin.qq.com/s/KCV2EbjG2xXd1hdUr6RVPw">2、漫谈传统IT基础设施02-服务器（上）</a>\n'
-                                          '<a href="https://mp.weixin.qq.com/s/PL0F6rEmkw3QSFJfDx39Lw">3、漫谈传统IT基础设施03-服务器（中）</a>\n'
-                                          '<a href="https://mp.weixin.qq.com/s/5KqvggkdmG5vhSW_-K-iiA">4、漫谈传统传统IT基础设施04-服务器（下）</a>\n'
-                                          '<a href="https://mp.weixin.qq.com/s/_ye4rfENEVeGFyWWERhuzg">5、漫谈传统IT基础设施05-网络（上）</a>\n'
-                                          '<a href="https://mp.weixin.qq.com/s/FY0FBS0mC7idKV2CSbPCRQ">6、漫谈传统IT基础设施06-网络（下）</a>\n'
-                                          '<a href="https://mp.weixin.qq.com/s/EdrZRuWbotU9zDJ03b1qdA">7、心意大于价值的女神节礼物</a>\n'
-                                          '<a href="https://mp.weixin.qq.com/s/jJfrXpEHBQR25gjdlR4Iog">8、漫谈传统IT基础设施07-存储（01）</a>\n'
-                                          '<a href="https://mp.weixin.qq.com/s/Nwk_E-gzXvoz4b4LULfmgw">9、漫谈传统IT基础设施08-存储（02）</a>\n'
-                                          '输入“基础架构”、“服务器”、“网络”、“3月免费公开课”关键字，系统会为您自动推荐文章。',
+                reply = TextReply(content='已收到您的留言，我会尽快回复，谢谢。\n'
+                                          '输入“基础架构”、“服务器”、“网络”、“存储”、“云计算”、“动手折腾”关键字，系统会为您自动推荐文章。',
                                   message=msg)
                 # 转换成 XML
                 xml = reply.render()
@@ -206,5 +224,19 @@ def create_menu(request):
     return HttpResponse('ok')
     # return render(request, 'create_menu.html')
 
+
 def test(request):
+    user = "usertest"
+    passwd="passwordtest"
+    data = {
+        'user':user,
+        'passwd':passwd,
+    }
+    return render(request,'test.html',locals())
+
+def test(request):
+    if request.method == 'POST' and request.POST:
+        user = request.POST['username']
+        passwd = request.POST['password']
+        print user,passwd
     return render(request,'test.html')

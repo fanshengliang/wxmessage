@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="896784d9-53fe-487d-b56e-a984c5001cd9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wxmessage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/wxmessage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxmessage/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/wxmessage/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wxmessage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wxmessage/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wxmessage/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1014">
-              <caret line="83" column="20" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
+            <state relative-caret-position="133">
+              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -45,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="148" column="98" selection-start-line="148" selection-start-column="98" selection-end-line="148" selection-end-column="98" />
+            <state relative-caret-position="238">
+              <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
               <folding>
                 <element signature="e#24#60#0" expanded="true" />
               </folding>
@@ -57,8 +57,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+            <state relative-caret-position="1483">
+              <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="61" selection-end-column="29" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/wx.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -66,7 +79,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wxmessage/temp2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="1225">
               <caret line="60" column="32" selection-start-line="48" selection-start-column="12" selection-end-line="60" selection-end-column="32" />
               <folding>
                 <element signature="e#24#60#0" expanded="true" />
@@ -97,7 +110,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/wx.html" />
-        <option value="$PROJECT_DIR$/wxmessage/settings.py" />
         <option value="$PROJECT_DIR$/wxmessage/receive.py" />
         <option value="$PROJECT_DIR$/wxmessage/reply.py" />
         <option value="$PROJECT_DIR$/wxmessage/test.py" />
@@ -105,16 +117,17 @@
         <option value="$PROJECT_DIR$/wxmessage/temp2.py" />
         <option value="$PROJECT_DIR$/templates/create_menu.html" />
         <option value="$PROJECT_DIR$/wxmessage/urls.py" />
+        <option value="$PROJECT_DIR$/wxmessage/settings.py" />
         <option value="$PROJECT_DIR$/templates/test.html" />
         <option value="$PROJECT_DIR$/wxmessage/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="251" />
-    <option name="y" value="276" />
-    <option name="width" value="1276" />
-    <option name="height" value="613" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1292" />
+    <option name="height" value="577" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -213,18 +226,21 @@
       <workItem from="1583916505042" duration="19000" />
       <workItem from="1584283274427" duration="2824000" />
       <workItem from="1584458852313" duration="605000" />
-      <workItem from="1584581922692" duration="1576000" />
+      <workItem from="1584581922692" duration="3970000" />
+      <workItem from="1585032602334" duration="600000" />
+      <workItem from="1585987135564" duration="616000" />
+      <workItem from="1586945470083" duration="9383000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59522000" />
+    <option name="totallyTimeSpent" value="72515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="629" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1289833" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14415781" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -237,8 +253,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3288948" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5016234" side_tool="true" weight="0.21675532" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49837664" visible="true" weight="0.12525253" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49837664" visible="true" weight="0.11515152" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3288948" />
       <window_info anchor="bottom" id="Favorites" order="13" weight="0.3288948" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -251,13 +267,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/wx.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wxmessage/reply.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -280,23 +289,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wxmessage/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding>
-            <element signature="e#643#675#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wxmessage/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1014">
-          <caret line="83" column="20" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wxmessage/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -307,9 +299,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wxmessage/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding>
+            <element signature="e#643#675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wxmessage/temp2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="1225">
           <caret line="60" column="32" selection-start-line="48" selection-start-column="12" selection-end-line="60" selection-end-column="32" />
           <folding>
             <element signature="e#24#60#0" expanded="true" />
@@ -317,17 +319,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wxmessage/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        <state relative-caret-position="1483">
+          <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="61" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/wx.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="148" column="98" selection-start-line="148" selection-start-column="98" selection-end-line="148" selection-end-column="98" />
+        <state relative-caret-position="238">
+          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
           <folding>
             <element signature="e#24#60#0" expanded="true" />
           </folding>
