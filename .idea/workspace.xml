@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="896784d9-53fe-487d-b56e-a984c5001cd9" name="Default Changelist" comment="" />
+    <list default="true" id="896784d9-53fe-487d-b56e-a984c5001cd9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/wxmessage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wxmessage/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1138">
-              <caret line="129" column="40" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
+            <state relative-caret-position="288">
+              <caret line="80" column="30" lean-forward="true" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
               <folding>
                 <element signature="e#24#60#0" expanded="true" />
               </folding>
@@ -224,18 +226,18 @@
       <workItem from="1584581922692" duration="3970000" />
       <workItem from="1585032602334" duration="600000" />
       <workItem from="1585987135564" duration="616000" />
-      <workItem from="1586945470083" duration="10008000" />
+      <workItem from="1586945470083" duration="13299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73140000" />
+    <option name="totallyTimeSpent" value="76431000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="629" extended-state="6" />
+    <frame x="-8" y="-8" width="1292" height="885" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14415781" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15422077" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -248,7 +250,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3288948" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5016234" side_tool="true" weight="0.21675532" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49837664" visible="true" weight="0.11515152" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49837664" visible="true" weight="0.075898804" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3288948" />
       <window_info anchor="bottom" id="Favorites" order="13" weight="0.3288948" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -341,8 +343,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1138">
-          <caret line="129" column="40" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
+        <state relative-caret-position="288">
+          <caret line="80" column="30" lean-forward="true" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
           <folding>
             <element signature="e#24#60#0" expanded="true" />
           </folding>
