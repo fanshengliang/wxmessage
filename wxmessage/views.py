@@ -72,9 +72,10 @@ def weixin(request):
             encoding_aes_key = '402Jb5bdXfGejPFfhvMd6On7tvzxAlapIYj6gxMEHX7'
             appid = 'wxfd99820aaa79b8ae'
             crypto = WeChatCrypto(token, encoding_aes_key, appid)
+            xml = parse_message(request.body)
             try:
                 decrypted_xml = crypto.decrypt_message(
-                    request.body,
+                    xml,
                     msg_signature,
                     timestamp,
                     nonce
