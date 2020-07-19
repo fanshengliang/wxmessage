@@ -169,8 +169,7 @@ def weixin(request):
                                               '<a href="https://mp.weixin.qq.com/s/mVlAMUTTx_aMKh5fJQRPSA">14、一起DevOps系列14-JavaScritp/JQuery前后端交互</a>\n'
                                               '<a href="https://mp.weixin.qq.com/s/9J2cfaLVDJALv7WhNf73lA">15、一起DevOps系列15-django前端展示后台数据</a>\n'
                                               '<a href="https://mp.weixin.qq.com/s/vm5RKiZybzWv4sWWyCexMQ">16、一起DevOps系列16-课程选课与退选业务逻辑添加</a>\n'
-                                              '<a href="https://mp.weixin.qq.com/s/TUMGPai4ndo3IxvTh9IJDg">17、一起DevOps系列17-成绩查询与成绩录入</a>\n'
-                                      ,
+                                              '<a href="https://mp.weixin.qq.com/s/TUMGPai4ndo3IxvTh9IJDg">17、一起DevOps系列17-成绩查询与成绩录入</a>\n',
                                       message=msg)
                 elif msg.content == '女神节礼物':
                     reply = TextReply(content='提取码：63cy',message=msg)
