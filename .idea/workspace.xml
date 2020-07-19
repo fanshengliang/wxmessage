@@ -42,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="171" column="140" selection-start-line="171" selection-start-column="140" selection-end-line="171" selection-end-column="140" />
+            <state relative-caret-position="424">
+              <caret line="169" column="145" selection-start-line="169" selection-start-column="145" selection-end-line="169" selection-end-column="145" />
               <folding>
                 <element signature="e#24#60#0" expanded="true" />
               </folding>
@@ -217,12 +217,12 @@
       <workItem from="1585987135564" duration="616000" />
       <workItem from="1586945470083" duration="18672000" />
       <workItem from="1587191662059" duration="3324000" />
-      <workItem from="1595128707678" duration="4440000" />
+      <workItem from="1595128707678" duration="5046000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89568000" />
+    <option name="totallyTimeSpent" value="90174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1812" height="1051" extended-state="6" />
@@ -347,8 +347,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="171" column="140" selection-start-line="171" selection-start-column="140" selection-end-line="171" selection-end-column="140" />
+        <state relative-caret-position="424">
+          <caret line="169" column="145" selection-start-line="169" selection-start-column="145" selection-end-line="169" selection-end-column="145" />
           <folding>
             <element signature="e#24#60#0" expanded="true" />
           </folding>
