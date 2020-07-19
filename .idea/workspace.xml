@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="896784d9-53fe-487d-b56e-a984c5001cd9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wxmessage/temp3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wxmessage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wxmessage/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wxmessage/views2.py" beforeDir="false" afterPath="$PROJECT_DIR$/wxmessage/views2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-601">
-              <caret line="194" column="101" selection-start-line="194" selection-start-column="101" selection-end-line="194" selection-end-column="101" />
+            <state relative-caret-position="249">
+              <caret line="180" column="97" selection-start-line="180" selection-start-column="97" selection-end-line="180" selection-end-column="97" />
               <folding>
                 <element signature="e#24#60#0" expanded="true" />
               </folding>
@@ -220,12 +217,12 @@
       <workItem from="1585987135564" duration="616000" />
       <workItem from="1586945470083" duration="18672000" />
       <workItem from="1587191662059" duration="3324000" />
-      <workItem from="1595128707678" duration="1882000" />
+      <workItem from="1595128707678" duration="2286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87010000" />
+    <option name="totallyTimeSpent" value="87414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1292" height="875" extended-state="6" />
@@ -350,8 +347,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wxmessage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-601">
-          <caret line="194" column="101" selection-start-line="194" selection-start-column="101" selection-end-line="194" selection-end-column="101" />
+        <state relative-caret-position="249">
+          <caret line="180" column="97" selection-start-line="180" selection-start-column="97" selection-end-line="180" selection-end-column="97" />
           <folding>
             <element signature="e#24#60#0" expanded="true" />
           </folding>

@@ -178,7 +178,7 @@ def weixin(request):
                     xml = reply.render()
                 else:
                     reply = create_reply('已收到您的留言，我会尽快回复，谢谢。\n'
-                                         '输入“基础架构”、“服务器”、“网络”、“存储”、“云计算”、“动手折腾”关键字，系统会为您自动推荐文章。', msg)
+                                         '输入“基础架构”、“服务器”、“网络”、“存储”、“云计算”、“动手折腾”、“Linux”、“DevOps”、“容灾”、“高可用”关键字，系统会为您自动推荐文章。', msg)
             elif msg.type == 'image':
                 reply = ImageReply(message=msg)
                 reply.media_id = 'rv1KVRYx5FzG8zdZIj31Bxw4LbLjpoNYwlybyiDSvdBjDYnmHqHRMqWORcsKJIiF'
