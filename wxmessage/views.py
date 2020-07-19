@@ -165,9 +165,9 @@ def weixin(request):
                                               '<a href="https://mp.weixin.qq.com/s/DSby6TARwpPPNGro5MDDuw">10、一起DevOps系列10-数据库设计与开发的范式</a>\n'
                                               '<a href="https://mp.weixin.qq.com/s/E9txUnaFcxzqll3RlbtZCw">11、一起DevOps系列11-数据库基本SQL命令</a>\n'
                                               '<a href="https://mp.weixin.qq.com/s/lSxdbLsFSeqSwsWQv_sF8w">12、一起DevOps系列12-django数据库创建与使用</a>\n'
-                                              '<a href="https://mp.weixin.qq.com/s/VIcLLuVWBg_LhTC5qx0GFQ">13、一起DevOps系列13-django后台管理及用户组与权限管理</a>\n',
-                                              # '<a href="https://mp.weixin.qq.com/s/mVlAMUTTx_aMKh5fJQRPSA">14、一起DevOps系列14-JavaScritp/JQuery前后端交互</a>\n'
-                                              # '<a href="https://mp.weixin.qq.com/s/9J2cfaLVDJALv7WhNf73lA">15、一起DevOps系列15-django前端展示后台数据</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/VIcLLuVWBg_LhTC5qx0GFQ">13、一起DevOps系列13-django后台管理及用户组与权限管理</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/mVlAMUTTx_aMKh5fJQRPSA">14、一起DevOps系列14-JavaScritp/JQuery前后端交互</a>\n'
+                                              '<a href="https://mp.weixin.qq.com/s/9J2cfaLVDJALv7WhNf73lA">15、一起DevOps系列15-django前端展示后台数据</a>\n',
                                               # '<a href="https://mp.weixin.qq.com/s/vm5RKiZybzWv4sWWyCexMQ">16、一起DevOps系列16-课程选课与退选业务逻辑添加</a>\n'
                                               # '<a href="https://mp.weixin.qq.com/s/TUMGPai4ndo3IxvTh9IJDg">17、一起DevOps系列17-成绩查询与成绩录入</a>\n',
                                       message=msg)
